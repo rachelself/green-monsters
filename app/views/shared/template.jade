@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= title
+    link(href='/css/normalize.css', rel='stylesheet')
+    link(href='/css/buttons.css', rel='stylesheet')
+    link(href='/less/app.css', rel='stylesheet')
+  body(style='background-image:url(/img/main-bg.jpg);')
+    nav
+      h1.logo Oceanic Aliens
+      span
+        a(href='/', class='button button-border-primary button-rounded') Home
+      span
+        a(href='/about', class='button button-border-primary button-rounded') About
+      span
+        a(href='/chimeras', class='button button-border-primary button-rounded') Chimeras
+
+
+    block content
+
+    script(src='/js/vendor/jquery-2.1.1.js')
+    script(src='/js/vendor/lodash-2.4.1.js')
+    script(src='/js/vendor/moment-2.6.0.js')
+    script(src='/js/vendor/buttons.js')
+    script(src='/js/vendor/traceur.js')
+    script(src='/js/es5/main.js')
+    script(src='/js/es6/compiled/main.js')
+
+    block scripts

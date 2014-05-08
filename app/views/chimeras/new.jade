@@ -1,0 +1,43 @@
+extends ../shared/template
+
+block content
+  #container
+    h2 Create a New Chimera
+    #new
+      form(method='POST', action='/chimeras')
+        span
+          input(name='name', type='text', placeholder='name')
+        span
+          input(name='age', type='text', placeholder='age')
+        span
+          select(name='gender')
+            option male
+            option female
+        span
+          select(name='head')
+            option head
+            option angler
+            option diver
+            option shark
+            option whale
+        span
+          select(name='body',)
+            option body
+            option angler
+            option diver
+            option shark
+            option whale
+        span
+          select(name='tail')
+            option tail
+            option angler
+            option diver
+            option shark
+            option whale
+        span
+          button Create Chimera
+
+
+    //- #newChimera
+    //-   span(class='button-wrap')
+    //-     a(href='#', class='button button-pill') New Alien

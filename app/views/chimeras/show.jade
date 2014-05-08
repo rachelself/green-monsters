@@ -1,0 +1,22 @@
+extends ../shared/template
+
+block content
+
+  #newChimera
+    span(class='button-wrap')
+      a(href='/chimeras/new', class='button button-pill') New Chimera
+  #container
+    h2 Your Oceanic Aliens
+      .chimera
+        .head
+          img(src='/img/#{chimera.head}')
+        .body
+          img(src='/img/#{chimera.body}')
+        .tail
+          img(src='/img/#{chimera.tail}')
+        .controls
+          .name name: #{chimera.name}
+          .age age: #{chimera.age}
+          .gender gender: #{chimera.gender}
+
+          a.delete(href='#') Delete Alien
