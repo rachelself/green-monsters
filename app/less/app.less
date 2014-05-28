@@ -1,10 +1,11 @@
 body{
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
 }
 
 nav{
-  background-color: rgba(3, 72, 89, 0.73);
+  background-color: rgba(11, 69, 145, 0.73);
   width: 100%;
   height: 50px;
   padding: 5px;
@@ -26,8 +27,8 @@ h1.logo{
 #welcome{
   background-color: rgba(255, 255, 255, 0.37);
   border-radius: 5px;
-  width: 75%;
-  height: auto;
+  width: 50%;
+  height: 100%;
   padding: 10px;
   margin: 0 auto;
   position: relative;
@@ -36,14 +37,19 @@ h1.logo{
 }
 
 h2{
-  font-size: 28px;
-  color: rgba(3, 72, 89, 0.73);  padding: 5px;
+  font-size: 40px;
+  color: rgb(7, 57, 110);
+  padding: 5px;
   text-align: center;
   line-height: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  top: -10px;
+  z-index: 40;
 }
 
 p{
-  color: rgba(3, 72, 89, 0.73);
+  color: rgb(7, 57, 110);
   font-size: 14px;
   text-align: center;
   line-height: 16px;
@@ -51,20 +57,22 @@ p{
 
 p.text{
   font-weight: normal;
-  padding: 2px;
+  padding: 10px;
   text-align: left;
 }
 
 h6{
   font-size: 16px;
-  color: rgba(3, 78, 89, 0.9);
+  color: rgb(7, 57, 110);
   text-align: center;
   line-height: 20px;
 }
 
+em{
+  color: #a9e005;
+}
+
 #chimeras{
-  background-color: rgba(255, 255, 255, 0.37);
-  border-radius: 5px;
   width: 90%;
   height: auto;
   padding: 10px;
@@ -74,59 +82,206 @@ h6{
 }
 
 .chimera{
-  width: 600px;
+  width: 400px;
   height: auto;
   display: inline-block;
   margin: 10px;
-  background-color: #aff8ff;
+  background-color: rgba(255, 255, 255, 0.21);
+  border-radius: 10px;
   padding: 10px;
   float: none;
   text-align: center;
-  // position: relative;
-  // top: 20px;
-  // left: 50px;
-}
-
-.head, .body, .tail{
-  height: 400px;
-  width: 200px;
-  display: inline-block;
-  padding: 0px;
-  margin-bottom: 10px;
-}
-
-.tail{
   position: relative;
-  left: -1px;
+  top: 30px;
 }
+
+.head, .body, .feet{
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 350px;
+  vertical-align: center;
+  // margin: 0 auto;
+  padding: 0;
+  display: block;
+  float: left;
+}
+
+.head{
+  // min-height: 110px;
+  // max-height: 130px;
+  height: 100px;
+  position: relative;
+  top: 0px;
+  z-index: 30;
+}
+
+.body{
+  height: 180px;
+  position: relative;
+  top: -40px;
+  z-index: 20;
+}
+
+.feet{
+  height: 50px;
+  position: relative;
+  top: -110px;
+  z-index: 10;
+//   position: relative;
+//   top: 0px;
+//   left: -10px
+}
+
+
+
+// .head, .body, .feet{
+//   height: 100%;
+//   width: 100%;
+//   display: block;
+//   padding: 0px;
+//   margin-bottom: 0px;
+//   vertical-align: center;
+// }
+//
+// .head{
+//   position: relative;
+//   top: 30px;
+//   z-index: 20;
+// }
+//
+// .body{
+//   position: relative;
+//   z-index: 10;
+// }
+//
+// .feet{
+//   position: relative;
+//   top: -70px;
+//   z-index: 5;
+// }
 
 
 .removeBtn{
   border: none;
-  background-color: rgba(3, 72, 89, 0.73);
+  border-radius: 20px;
+  background-color: rgba(11, 69, 145, 0.73);
+  letter-spacing: 1px;
   color: white;
   width: 100px;
   padding: 5px 10px;
-  float: right;
+  float: none;
 
 }
 
-.controls{
-  text-transform: uppercase;
+a{
+  text-decoration: none;
+  padding-left: 5px;
+
+}
+
+a:hover{
+  color: #799410;
+}
+
+h6.breadcrumb a{
+  margin: 0 auto;
   font-size: 14px;
 }
 
-#newChimera{
-  float: right;
+
+.controls{
+  text-transform: uppercase;
+  float: left;
+  text-align: left;
+  font-size: 14px;
+  margin-left: 20px;
   position: relative;
-  top: 20px;
-  right: 20px;
+  top: -50px;
+}
+
+.name, .age, .gender, .delete{
 
 }
 
-#new span{
-  margin-left: 5px;
+.name{
+  background-color: #a9e005;
+  padding: 5px 7px;
+  width: 100%;
+  margin-left: -5px;
+  margin-bottom: 5px;
 }
+
+.delete{
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+
+#newChimera{
+  float: none;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 130px;
+  left: 750px;
+  z-index: 50;
+
+
+}
+
+#new{
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.21);
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  }
+
+input{
+  margin: 10px 0px;
+  width: 95%;
+  display: block;
+  float: none;
+}
+
+select{
+  margin: 10px 10px;
+  display: inline-block;
+  padding: 10px;
+}
+
+span.button-wrap a.button.button-pill{
+  margin: 0 auto;
+}
+
+#create{
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 20px;
+  background-color: #a9e005;
+  color: rgba(11, 69, 145, 1);
+  width: 200px;
+  padding: 7px;
+  float: none;
+  margin: 10px;
+}
+
+#one{
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+// #new span{
+//   margin-left: 5px;
+// }
 
 
 // span.button-wrap, a.button.button-pill{

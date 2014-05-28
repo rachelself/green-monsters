@@ -1,41 +1,37 @@
 extends ../shared/template
 
 block content
-  #container
-    h2 Create a New Chimera
-    #new
-      form(method='POST', action='/chimeras')
-        span
-          input(name='name', type='text', placeholder='name')
-        span
-          input(name='age', type='text', placeholder='age')
-        span
-          select(name='gender')
-            option male
-            option female
-        span
-          select(name='head')
-            option head
-            option angler
-            option diver
-            option shark
-            option whale
-        span
-          select(name='body',)
-            option body
-            option angler
-            option diver
-            option shark
-            option whale
-        span
-          select(name='tail')
-            option tail
-            option angler
-            option diver
-            option shark
-            option whale
-        span
-          button Create Chimera
+
+  h2 Create a New Monster
+  #new
+    form(method='POST', action='/chimeras')
+      span
+        input(name='name', type='text', placeholder='name')
+      span
+        input(name='age', type='text', placeholder='age')
+      span
+        select(name='gender')
+          option male
+          option female
+      span
+        select(name='head')
+          option head
+          option shrek
+          option alien
+          option mike
+      span
+        select(name='body',)
+          option body
+          option alien
+          option shrek
+      span
+        select(name='feet')
+          option feet
+          option alien
+          option shrek
+          option mike
+      span
+        button#create Make It!
 
 
     //- #newChimera

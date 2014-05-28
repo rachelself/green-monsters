@@ -7,7 +7,7 @@ exports.index = (req, res)=>{
 
   chimeras.find().toArray((err, records)=>{
     //console.log(records);
-    res.render('chimeras/index', {chimeras: records, title: 'Chimeras'});
+    res.render('chimeras/index', {chimeras: records, title: 'All Green Monsters'});
   });
 };
 
@@ -16,12 +16,12 @@ exports.show = (req, res)=>{
   var _id = Mongo.ObjectID(req.params.id);
 
   chimeras.findOne({_id:_id}, (err, record)=>{
-    res.render('chimeras/show', {chimera: record, title: 'Chimeras'});
+    res.render('chimeras/show', {chimera: record, title: 'Your Green Monster'});
   });
 };
 
 exports.new = (req, res)=>{
-    res.render('chimeras/new', {title: 'New Chimera'});
+    res.render('chimeras/new', {title: 'New Monster'});
   };
 
 
@@ -40,55 +40,44 @@ exports.create = (req, res)=>{
   var head;
 
   switch(req.body.head){
-    case 'angler':
-      head = 'angler-head.jpg';
+    case 'alien':
+      head = 'alien-head.png';
       break;
-    case 'diver':
-      head = 'diver-head.jpg';
+    case 'shrek':
+      head = 'shrek-head.png';
       break;
-    case 'shark':
-      head = 'shark-head.jpg';
-      break;
-    case 'whale':
-      head = 'whale-head.jpg';
+    case 'mike':
+      head = 'mike-wazowski-head.png';
   }
 
   var body;
 
   switch(req.body.body){
-    case 'angler':
-      body = 'angler-body.jpg';
+    case 'alien':
+      body = 'alien-body.png';
       break;
-    case 'diver':
-      body = 'diver-body.jpg';
-      break;
-    case 'shark':
-      body = 'shark-body.jpg';
-      break;
-    case 'whale':
-      body = 'whale-body.jpg';
+    case 'shrek':
+      body = 'shrek-body.png';
   }
 
 
-  var tail;
+  var feet;
 
-  switch(req.body.tail){
-    case 'angler':
-      tail = 'angler-tail.jpg';
+  switch(req.body.feet){
+  case 'alien':
+      feet = 'alien-feet.png';
       break;
-    case 'diver':
-      tail = 'diver-tail.jpg';
+    case 'shrek':
+      feet = 'shrek-feet.png';
       break;
-    case 'shark':
-      tail = 'shark-tail.jpg';
-      break;
-    case 'whale':
-      tail = 'whale-tail.jpg';
+    case 'mike':
+      feet = 'mike-wazowski-feet.png';
+
   }
 
   req.body.head = head;
   req.body.body = body;
-  req.body.tail = tail;
+  req.body.feet = feet;
 
   var chimeras = global.nss.db.collection('chimeras');
 
