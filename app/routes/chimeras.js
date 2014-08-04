@@ -6,7 +6,6 @@ exports.index = (req, res)=>{
   var chimeras = global.nss.db.collection('chimeras');
 
   chimeras.find().toArray((err, records)=>{
-    //console.log(records);
     res.render('chimeras/index', {chimeras: records, title: 'All Green Monsters'});
   });
 };
