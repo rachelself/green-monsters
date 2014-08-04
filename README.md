@@ -2,7 +2,7 @@ Green Monsters
 ===============
 A fun little app for creating hybrid monsters.
 
-Green Monsters uses the following technologies:
+#Technologies:
 - Node.js
 - Express
 - MongoDB
